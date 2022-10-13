@@ -1,0 +1,18 @@
+/* h1{
+  background-color: aqua;
+  color: red;
+  text-align: center;
+} */
+
+h1{
+  background-color: aqua;
+  width: 70%;
+  margin:10px  auto;
+  border-radius: 20px;
+}
+
+div{
+  border: 1px solid black;
+  margin: 5px auto;
+  width: 90%;
+}

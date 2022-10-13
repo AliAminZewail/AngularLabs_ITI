@@ -1,0 +1,13 @@
+<form class="form" (ngSubmit)="SendData(name.value, +age.value)">
+  <div class="form-group m-3 d-flex justify-content-center">
+    <label class="w-25">Name: </label>
+    <input #name type="text" class="form-control w-75" />
+  </div>
+  <div class="form-group m-3 d-flex justify-content-center">
+    <label class="w-25">Age: </label>
+    <input #age type="number" class="form-control w-75" />
+  </div>
+  <div class="form-group m-3 d-flex justify-content-center">
+    <input type="submit" value="Submit" class="btn btn-outline-dark w-50" />
+  </div>
+</form>

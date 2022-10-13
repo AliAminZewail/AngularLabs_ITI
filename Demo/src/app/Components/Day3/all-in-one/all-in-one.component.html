@@ -1,0 +1,41 @@
+<h1>Registeration</h1>
+<div class="form">
+  <label>Name</label>
+  <input type="text" [(ngModel)]="studentName"/>
+  <div style="color: red;" *ngIf="studentName.length < 3 && studentName !=''">
+    Length &gt; 3
+  </div>
+  <label>Age</label>
+  <input type="number" [(ngModel)]="studentAge"/>
+  <div style="color: red;" *ngIf="studentAge > 30;else trueBlock">
+    Age &lt; 30
+  </div>
+  <ng-template #trueBlock>
+    <div style="color: green;" *ngIf="studentAge !=0" >
+      Valid
+    </div>
+  </ng-template>
+  <!-- <div style="color: green;" *ngIf="studentAge<=30 && studentAge !=0">
+    Valid
+  </div> -->
+  <input type="button" value="ADD" (click)="AddNewStudent()"/>
+</div>
+
+<h1>Students</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--Directive-->
+    <tr *ngFor="let s of AllStudents">
+      <td>{{s.name}}</td>
+      <!--*ngIf-->
+      <td>{{s.age}}</td>
+      <!-- <td *ngIf="s.age < 30">{{s.age}}</td> -->
+    </tr>
+  </tbody>
+</table>
